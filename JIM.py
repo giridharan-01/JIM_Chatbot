@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 # 🔥 FIX PROXY ISSUE
 os.environ.pop("HTTP_PROXY", None)
 os.environ.pop("HTTPS_PROXY", None)
