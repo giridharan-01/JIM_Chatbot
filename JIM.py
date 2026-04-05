@@ -14,7 +14,7 @@ st.set_page_config(page_title="JIM - PDF Assistant", page_icon="📕",layout="wi
 # HEADER
 # =========================
 st.title("🤖 JIM - PDF Assistant")
-st.markdown("### 🚀 Your Smart Academic Companion - JIM")
+st.markdown("### 🚀 Your Smart Academic Companion - Just In Minutes")
 
 st.markdown("---")
 
