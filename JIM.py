@@ -1,4 +1,11 @@
 import streamlit as st
+# 🔥 FIX PROXY ISSUE
+os.environ.pop("HTTP_PROXY", None)
+os.environ.pop("HTTPS_PROXY", None)
+os.environ.pop("http_proxy", None)
+os.environ.pop("https_proxy", None)
+os.environ["NO_PROXY"] = "*"
+os.environ["no_proxy"] = "*"
 
 st.set_page_config(page_title="JIM - PDF Assistant", page_icon="📕",layout="wide")
 
