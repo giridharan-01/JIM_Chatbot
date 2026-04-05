@@ -13,3 +13,4 @@ markdown
 weasyprint
 PyPDF2
 httpx==0.27.0
+python-docx
