@@ -627,6 +627,15 @@ for key, idx in section_map.items():
 
             for i, q in enumerate(questions):
 
+                # ✅ FIX 1: Ensure valid string label
+                if not isinstance(q, str) or not q.strip():
+                    continue  # skip invalid questions
+            
+                # ✅ FIX 2: Trim very long labels (Streamlit bug prevention)
+                safe_q = q.strip()
+                if len(safe_q) > 300:
+                    safe_q = safe_q[:300] + "..."
+
                 checkbox_key = f"{unit}_{key}_{i}"
 
                 # ✅ Initialize checkbox state from selected_list (CRITICAL FIX)
