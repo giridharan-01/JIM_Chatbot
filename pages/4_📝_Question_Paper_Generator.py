@@ -649,7 +649,7 @@ for key, idx in section_map.items():
                 )
 
                 checked = st.checkbox(
-                    q,
+                    safe_q,
                     key=checkbox_key,
                     disabled=disabled
                 )
@@ -662,6 +662,9 @@ for key, idx in section_map.items():
 
                     for u in st.session_state.question_bank:
                         for j, ques in enumerate(st.session_state.question_bank[u][key]):
+                            # ✅ skip invalid again during rebuild
+                            if not isinstance(ques, str) or not ques.strip():
+                                continue
                             k = f"{u}_{key}_{j}"
                             if st.session_state.get(k, False):
                                 updated_list.append(ques)
