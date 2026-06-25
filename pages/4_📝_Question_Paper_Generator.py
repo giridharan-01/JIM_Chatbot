@@ -698,7 +698,7 @@ file_name = st.text_input(
 )
 
 # ✅ STEP 1: Generate files
-if st.button("📄 Generate Download Files"):
+if st.button("📄 Generate & Download Files"):
 
     selected = st.session_state.selected_questions
     errors = validate_selection(selected, req_3m, req_5m, req_10m)
